@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/bmi_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="109dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="109dp"
+        android:text="BMI 계산기"
+        android:textColor="#000000"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/height_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="신장"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/height_input"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.298" />
+
+    <EditText
+        android:id="@+id/height_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="number|numberDecimal"
+        app:layout_constraintBottom_toBottomOf="@+id/height_description"
+        app:layout_constraintEnd_toStartOf="@+id/height_unit"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/height_description"
+        app:layout_constraintTop_toTopOf="@+id/height_description"
+        app:layout_constraintVertical_bias="0.533" />
+
+    <TextView
+        android:id="@+id/height_unit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="cm"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/height_input"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/height_input"
+        app:layout_constraintTop_toTopOf="@+id/height_input" />
+
+    <TextView
+        android:id="@+id/weight_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="체중"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/height_description"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="@+id/height_description"
+        app:layout_constraintTop_toBottomOf="@+id/height_description" />
+
+    <EditText
+        android:id="@+id/weight_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="number|numberDecimal"
+        app:layout_constraintBottom_toBottomOf="@+id/weight_description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.101"
+        app:layout_constraintStart_toEndOf="@+id/weight_description"
+        app:layout_constraintTop_toTopOf="@+id/weight_description"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/weight_unit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="kg"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/weight_input"
+        app:layout_constraintStart_toEndOf="@+id/weight_input"
+        app:layout_constraintTop_toTopOf="@+id/weight_input" />
+
+    <Button
+        android:id="@+id/generate"
+        android:layout_width="106dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="161dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="161dp"
+        android:text="측정하기"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/weight_description" />
+</androidx.constraintlayout.widget.ConstraintLayout>
